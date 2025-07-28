@@ -3,11 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>profile</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>xschi-dev-basics</h1>
-    <h2>250725 연습 1</h2>
-    <h3>유진</h3>
+    <body>
+      <main class="container">
+
+    <!-- 왼쪽 프로필 영역 -->
+    <section class="profile">
+      <img src="image/gotchigraph.gif" alt="Profile Image" class="profile-img" />
+
+      <header>
+        <h1>안녕하세요.<br>서유진입니다.</h1>
+        <p class="subtext">개발 기초 부수기 2일차</p>
+      </header>
+
+      <address class="info">
+  <p class="name">서유진 Seo Yu Jin</p>
+  <p><span class="label">출생</span> 200X. 0X. XX</p>
+  <p><span class="label">전화번호</span> 010. 9876. 4321</p>
+  <p><span class="label">거주지</span> 인천 서구</p>
+  <p><span class="label">연락처</span> 0529dbwls@gmail.com</p>
+</address>
+    </section>
+
+    <!-- 오른쪽 문의 영역 -->
+    <section class="contact">
+      <form>
+  <label for="email">문의</label>
+  <div class="input-row">
+    <input type="email" id="email" placeholder="이메일을 작성해주세요." />
+    <button type="submit">제출</button>
+  </div>
+</form>
+    </section>
+
+  </main>
   </body>
 </html>
