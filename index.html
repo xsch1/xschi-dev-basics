@@ -32,15 +32,24 @@
 
     <!-- 오른쪽 문의 영역 -->
     <section class="contact">
-      <form>
+      <form id="contact-form" class="contact">
   <label for="email">문의</label>
   <div class="input-row">
-    <input type="email" id="email" placeholder="이메일을 작성해주세요." />
+    <input type="email" id="email" placeholder="이메일을 작성해주세요." required />
     <button type="submit">제출</button>
   </div>
 </form>
     </section>
 
   </main>
+  <script>
+  const form = document.getElementById('contact-form');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault(); // 페이지 새로고침 방지
+    alert('감사합니다!');
+    form.reset(); // 인풋 내용 비우기 (선택사항)
+  });
+</script>
   </body>
 </html>
