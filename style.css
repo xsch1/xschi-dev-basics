@@ -13,7 +13,7 @@ body {
 
 /* 전체 컨테이너 (1440 기준 가운데 정렬) */
 main.container {
-  max-width: 1440px;
+  max-width: 1200px;
   margin: 24px auto;
   padding: 80px;
   background-color: #fff;
@@ -21,8 +21,7 @@ main.container {
   justify-content: space-between;
   align-items: flex-start;
 
-  box-shadow: 0 7px 29px rgba(100, 100, 111, 0.1); /* 여기 추가 */
-  background-color: #fff; /* 그림자가 보이려면 배경색도 필요 */
+  box-shadow: 0 7px 29px rgba(100, 100, 111, 0.05); /* 여기 추가 */
   border-radius: 16px;
 }
 
@@ -52,7 +51,7 @@ main.container {
   font-weight: 400;
   line-height: 1.6;
   color: #7f7f7f;
-  margin-bottom: 134px;
+  margin-bottom: 80px;
 }
 
 .name {
@@ -120,4 +119,30 @@ main.container {
 .contact input[type='email']::placeholder {
   color: #a1a1a1; /* 원하는 placeholder 색상 */
   opacity: 1; /* 흐리게 보이는 거 방지 */
+}
+
+@media (max-width: 1200px) {
+  main.container {
+    flex-direction: column;
+    align-items: center;
+    gap: 64px;
+  }
+
+  .profile {
+    min-width: auto;
+    width: 100%;
+  }
+
+  .contact {
+    width: 100%;
+    align-self: center;
+  }
+
+  .input-row {
+    flex-direction: column;
+  }
+
+  .contact button {
+    width: 100%;
+  }
 }
