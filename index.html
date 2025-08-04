@@ -1,55 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>profile</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <body>
-      <main class="container">
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>XSCHI - Designer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- 상단 고정 네비게이션 -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <a href="index.html">XSCHI</a>
+            </div>
+            <div class="nav-menu">
+                <a href="index.html" class="nav-link active">ABOUT</a>
+                <a href="works.html" class="nav-link">WORKS</a>
+                <a href="#" class="nav-link">PROTOTYPE</a>
+            </div>
+        </div>
+    </nav>
 
-    <!-- 왼쪽 프로필 영역 -->
-    <section class="profile">
-      <img src="image/gotchigraph.gif" alt="Profile Image" class="profile-img" />
+    <!-- 메인 컨테이너 -->
+    <main class="container">
+        <div class="content-wrapper">
+            <!-- 프로필 이미지 -->
+            <div class="profile-image">
+                <img src="image/memoji.png" alt="SEO YUJIN Profile" class="profile-img">
+            </div>
 
-      <header>
-        <h1>안녕하세요.<br>서유진입니다.</h1>
-        <p class="subtext">음악을 자주 듣고 게임도 합니다.
-<br>최근 TFT 티어 플래티넘 달성했습니다.
-<br>MBTI는 ISTP이며 무난함을 선호합니다.</p>
-      </header>
+            <!-- 프로필 정보 -->
+            <div class="profile-info">
+                <h1 class="name">SEO YUJIN</h1>
+                <p class="role">designer</p>
+            </div>
 
-      <address class="info">
-  <p class="name">서유진 Seo Yu Jin</p>
-  <p><span class="label">출생</span> 200X. 0X. XX</p>
-  <p><span class="label">전화번호</span> 010. 9876. 4321</p>
-  <p><span class="label">거주지</span> 인천 서구</p>
-  <p><span class="label">연락처</span> 0529dbwls@gmail.com</p>
-</address>
-    </section>
+            <!-- About me 섹션 -->
+            <section class="about-section">
+                <h2 class="section-title">About me</h2>
+                <div class="about-content">
+                    <p class="intro-text">/ 안녕하세요.<br>서유진입니다.</p>
+                    <p class="description">
+                        작은 요소 하나에도 신경을 담아 설계하는 디자이너<br>
+                        서유진입니다. 사람들의 경험 속에서 단순 찾는<br>
+                        디자인을 추구하며, 꼼임없이 연구하고 물어봅니다.
+                    </p>
+                </div>
+            </section>
 
-    <!-- 오른쪽 문의 영역 -->
-    <section class="contact">
-      <form id="contact-form" class="contact">
-  <label for="email">문의</label>
-  <div class="input-row">
-    <input type="email" id="email" placeholder="이메일을 작성해주세요." required />
-    <button type="submit">제출</button>
-  </div>
-</form>
-    </section>
+            <!-- Tool Set 섹션 -->
+            <section class="toolset-section">
+                <h2 class="section-title">Tool Set</h2>
+                <div class="toolset-grid">
+                    <div class="tool-item">
+                        <span class="tool-category">product design</span>
+                        <span class="tool-name">Figma</span>
+                    </div>
+                    <div class="tool-item">
+                        <span class="tool-category">web service</span>
+                        <span class="tool-name">Framer / Visual Studio code</span>
+                    </div>
+                    <div class="tool-item">
+                        <span class="tool-category">Artwork</span>
+                        <span class="tool-name">Adobe Illustrator / Adobe Photoshop</span>
+                    </div>
+                    <div class="tool-item">
+                        <span class="tool-category">communication</span>
+                        <span class="tool-name">Notion / Slack / JIRA / Git Hub</span>
+                    </div>
+                </div>
+            </section>
+        </div>
 
-  </main>
-  <script>
-  const form = document.getElementById('contact-form');
-
-  form.addEventListener('submit', function (e) {
-    e.preventDefault(); // 페이지 새로고침 방지
-    alert('감사합니다!');
-    form.reset(); // 인풋 내용 비우기 (선택사항)
-  });
-</script>
-  </body>
+        <!-- 하단 연락처 -->
+        <footer class="contact-footer">
+            <p>0529dbwls@gmail.com</p>
+            <p>010-5810-3034</p>
+        </footer>
+    </main>
+</body>
 </html>
