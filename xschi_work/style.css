@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: 'Pretendard', sans-serif;
+  color: #000;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  padding: 24px 0;
+  border-bottom: 1px solid #eee;
+  z-index: 1000;
+}
+
+.navbar-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-menu {
+  display: flex;
+  gap: 24px;
+}
+
+main {
+  max-width: 1200px;
+  margin: 120px auto 0;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.profile-img-container {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+
+.profile-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #f1f1f1;
+  z-index: 1;
+}
+
+.profile-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 80px;
+  z-index: 2;
+}
+
+.profile-section {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.profile-img {
+  width: 80px;
+  fill: #f1f1f1;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.name {
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.title {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+.about-description {
+  margin-top: 40px;
+}
+
+.intro-bold {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.intro-desc {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+.toolset {
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.toolset h3 {
+  margin-bottom: 12px;
+}
+
+.toolset ul {
+  padding-left: 16px;
+  list-style: none;
+}
+
+.toolset li {
+  margin-bottom: 4px;
+}
+
+.contact {
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.works-title {
+  font-size: 48px;
+  margin-bottom: 48px;
+}
+
+.works-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.works-table th,
+.works-table td {
+  border-bottom: 1px solid #eee;
+  padding: 12px 8px;
+  text-align: left;
+}
+
+.thumbnail {
+  width: 100px;
+  height: 60px;
+  background: #eee;
+}
