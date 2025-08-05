@@ -1,156 +1,231 @@
-body {
+/* 기본 리셋 및 전체 레이아웃 설정 */
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
   font-family: 'Pretendard', sans-serif;
+  font-size: 16px;
   color: #000;
   background: #fff;
+  line-height: 1.6;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
-}
-
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  background: white;
-  padding: 24px 0;
-  border-bottom: 1px solid #eee;
-  z-index: 1000;
-}
-
-.navbar-inner {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav-menu {
-  display: flex;
-  gap: 24px;
+  text-decoration: none;
 }
 
 main {
-  max-width: 1200px;
-  margin: 120px auto 0;
-  padding: 0 20px;
-  box-sizing: border-box;
-}
-.profile-img-container {
-  position: relative;
-  width: 80px;
-  height: 80px;
+  flex: 1;
+  padding-top: 48px; /* 화면 상단과 콘텐츠 사이 여백 */
 }
 
-.profile-bg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  background-color: #f1f1f1;
-  z-index: 1;
-}
-
-.profile-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 80px;
-  height: 80px;
-  z-index: 2;
-}
-
-.profile-section {
+/* 네비게이션 */
+.nav {
   display: flex;
-  gap: 16px;
+  justify-content: space-between;
   align-items: center;
+  padding: 50px;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nav-links a {
+  margin-left: 40px;
+  font-size: 20px;
+  font-weight: 500;
+  color: #9d9d9d;
+}
+
+.nav-links .active {
+  font-weight: 500;
+  color: #000;
+}
+
+/* 프로필 섹션 */
+.profile {
+  display: flex;
+  align-items: center;
+  padding: 48px 50px 24px;
+}
+
+.profile-img-wrapper {
+  position: relative;
+  width: 84px;
+  height: 84px;
+  margin-right: 16px;
+}
+
+.profile-circle {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 84px;
+  height: 84px;
+  background-color: #f1f1f1; /* 회색 원 */
+  border-radius: 50%;
+  z-index: 0;
 }
 
 .profile-img {
-  width: 80px;
-  fill: #f1f1f1;
-}
-
-.profile-info {
-  display: flex;
-  flex-direction: column;
-  gap: 2px;
+  position: relative;
+  width: 84px;
+  height: 84px;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 .name {
   font-size: 28px;
+  color: #000;
   font-weight: 700;
+  margin-bottom: 2px;
+  line-height: 130%;
 }
 
-.title {
+.role {
   font-size: 20px;
+  color: #000;
   font-weight: 400;
+  line-height: 130%;
 }
 
-.about-description {
-  margin-top: 40px;
+/* 자기소개 */
+
+.aboutme {
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+  margin: 80px 0px 32px;
+  line-height: 160%;
 }
 
-.intro-bold {
-  font-weight: bold;
+.intro h3 {
+  font-size: 40px;
+  margin-bottom: 24px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+.intro {
+  padding: 0px 50px 300px;
+  font-size: 26px;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+/* 테이블 기본 스타일 */
+/* 제목 라벨 */
+.section-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 8px 50px 32px;
+  color: #000;
+}
+
+/* 표 기본 구조 */
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* 테이블 헤더 셀 */
+.th-no,
+.th-name,
+.th-project,
+.th-year {
+  text-align: left;
+  font-weight: 600;
+  padding: 32px 50px;
+  font-size: 14px;
+  line-height: 150%;
+  border-bottom: 1px solid #000;
+}
+
+/* 데이터 셀 각각 분리 */
+.td-no {
+  font-size: 14px;
+  padding: 12px 50px;
+  vertical-align: top;
+}
+
+.td-name {
+  padding: 12px 50px;
+  vertical-align: top;
+}
+
+.td-project {
+  padding: 12px 50px;
+  vertical-align: top;
+}
+
+.td-year {
+  padding: 12px 50px;
+  font-size: 14px;
+  color: #555;
+  text-align: right;
+  vertical-align: top;
+}
+
+/* 안의 텍스트 요소들 */
+.project-name {
+  font-weight: 700;
   font-size: 16px;
 }
 
-.intro-desc {
-  font-size: 14px;
-  margin-top: 8px;
-}
-
-.toolset {
-  margin-top: 40px;
+.project-desc-title {
+  font-weight: 600;
+  margin-bottom: 6px;
   font-size: 14px;
 }
 
-.toolset h3 {
-  margin-bottom: 12px;
+.project-desc-item {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 2px;
 }
 
-.toolset ul {
-  padding-left: 16px;
-  list-style: none;
-}
-
-.toolset li {
-  margin-bottom: 4px;
-}
-
-.contact {
-  margin-top: 40px;
-  font-size: 14px;
-}
-
-.works-title {
-  font-size: 48px;
-  margin-bottom: 48px;
-}
-
-.works-table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 14px;
-}
-
-.works-table th,
-.works-table td {
-  border-bottom: 1px solid #eee;
-  padding: 12px 8px;
-  text-align: left;
-}
-
-.thumbnail {
+/* WORKS 페이지용 썸네일 및 역할 */
+.thumb {
   width: 100px;
-  height: 60px;
-  background: #eee;
+  height: 70px;
+  background: #ccc;
+  margin-bottom: 5px;
+}
+
+.desc p {
+  font-size: 13px;
+  color: #444;
+}
+
+.page-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0 20px 20px;
+}
+
+.footer-section h4 {
+  margin-bottom: 10px;
+}
+
+/* Footer */
+.footer {
+  padding: 40px 50px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: #666;
+}
+
+.footer-contact {
+  text-align: right;
 }

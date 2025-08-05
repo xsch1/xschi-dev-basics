@@ -1,76 +1,115 @@
+<!-- about.html -->
 <!DOCTYPE html>
 <html lang="ko">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>xschi</title>
+    <title>XSCHI</title>
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <header class="navbar">
-      <div class="navbar-inner">
-        <a class="logo" href="./index.html">XSCHI</a>
-        <nav class="nav-menu">
-          <a href="./index.html">ABOUT</a>
-          <a href="./works.html">WORKS</a>
-          <a href="./prototype.html">PROTOTYPE</a>
-        </nav>
-      </div>
+    <div class="wrapper">
+      <!-- header -->
+      <!-- main -->
+      <!-- footer -->
+    </div>
+    <header class="nav">
+      <h1 class="logo"><a href="./index.html">XSCHI</a></h1>
+      <nav class="nav-links">
+        <a href="./index.html" class="active">ABOUT</a>
+        <a href="./works.html">WORKS</a>
+        <a href="./prototype.html">PROTOTYPE</a>
+      </nav>
     </header>
 
     <main class="about">
-      <section class="profile-section">
-        <div class="profile-img-container">
-          <div class="profile-img-container">
-            <div class="profile-bg"></div>
-            <img src="./image/memoji.png" class="profile-img" alt="Profile" />
-          </div>
-        </div>
-        <div class="profile-info">
-          <div class="name">SEO YUJIN</div>
-          <div class="title">designer</div>
-        </div>
+      <div class="profile">
+  <div class="profile-img-wrapper">
+    <div class="profile-circle"></div>
+    <img src="./image/memoji.png" alt="프로필 이미지" class="profile-img" />
+  </div>
+  <div class="profile-info">
+    <h2>SEO YUJIN</h2>
+    <p class="role">designer</p>
+  </div>
+</div>
       </section>
 
-      <section class="about-description">
-        <h2>About me</h2>
-        <p class="intro-bold">
-          / 안녕하세요.
+      <section class="intro">
+        <p class="aboutme">About me</p>
+        <h3>
+          안녕하세요. 디자이너 서유진입니다.
           <br />
-          서유진입니다.
-        </p>
-        <p class="intro-desc">
-          작은 요소 하나에도 진심을 담아 설계하는 디자이너 서유진입니다.
-          사람들의 경험 속에서 답을 찾는 디자인을 추구하며, 끊임없이 연구하고
-          몰입합니다.
+          표면적인 예쁨에 머물지 않고,
+          <br />
+          본질을 읽어내는 디자인을 고민합니다.
+        </h3>
+        <p>
+          저는 사람들의 경험 속에서 답을 찾는 디자인을 추구하며
+          <br />
+          끊임없이 연구하고 실험하는 사람입니다.
         </p>
       </section>
 
-      <section class="toolset">
-        <h3>Tool Set</h3>
-        <ul>
-          <li>
-            <strong>product design</strong>
-            — Figma
-          </li>
-          <li>
-            <strong>web service</strong>
-            — Framer / Visual Studio Code
-          </li>
-          <li>
-            <strong>Artwork</strong>
-            — Adobe Illustrator / Adobe Photoshop
-          </li>
-          <li>
-            <strong>communication</strong>
-            — Notion / Slack / JIRA / GitHub
-          </li>
-        </ul>
-      </section>
+      <p class="section-title">Main Project</p>
 
-      <footer class="contact">
-        <p>0529dbwls@gmail.com</p>
-        <p>010-5810-3034</p>
+<table class="project-table">
+  <thead>
+    <tr>
+      <th class="th-no">No.</th>
+      <th class="th-name">Name</th>
+      <th class="th-project">Project</th>
+      <th class="th-year">Year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="td-no">01</td>
+      <td class="td-name">
+        <p class="project-name">프로젝트 제목</p>
+      </td>
+      <td class="td-project">
+        <p class="project-desc-title">프로젝트 설명제목</p>
+        <p class="project-desc-item">주요 작업 설명</p>
+        <p class="project-desc-item">주요 작업 설명</p>
+      </td>
+      <td class="td-year">2025.08 - 2025.08</td>
+    </tr>
+  </tbody>
+</table>
+
+     
+
+      <section class="tool-list">
+  <p class="tool-title">Tool list</p>
+
+  <p>
+    <strong>product design</strong>
+    Figma
+  </p>
+  <p>
+    <strong>web service</strong>
+    Framer / VS Code
+  </p>
+  <p>
+    <strong>artwork</strong>
+    Illustrator / Photoshop
+  </p>
+  <p>
+    <strong>communication</strong>
+    Notion / Jira / GitHub
+  </p>
+</section>
+
+
+      <footer class="footer">
+        <p>
+          010-0000-0000
+          <br />
+          0123abv@gmail.com
+          <br />
+          서유진 Seo yujin
+        </p>
       </footer>
     </main>
   </body>
