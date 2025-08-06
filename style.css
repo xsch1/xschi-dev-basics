@@ -54,7 +54,7 @@ main {
 .profile {
   display: flex;
   align-items: center;
-  padding: 48px 50px 24px;
+  padding: 48px 50px 96px;
 }
 
 .profile-img-wrapper {
@@ -100,14 +100,6 @@ main {
 
 /* 자기소개 */
 
-.aboutme {
-  font-size: 16px;
-  color: #000;
-  font-weight: 600;
-  margin: 80px 0px 32px;
-  line-height: 160%;
-}
-
 .intro h3 {
   font-size: 40px;
   margin-bottom: 24px;
@@ -123,9 +115,8 @@ main {
 }
 
 /* 테이블 기본 스타일 */
-/* 제목 라벨 */
 .section-title {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 600;
   margin: 8px 50px 32px;
   color: #000;
@@ -137,63 +128,114 @@ main {
   border-collapse: collapse;
 }
 
-/* 테이블 헤더 셀 */
-.th-no,
-.th-name,
-.th-project,
-.th-year {
+/* 프로젝트 테이블 wrapper */
+.project-table-wrapper {
+  padding: 0 50px 160px;
+}
+
+/* 테이블 구조 */
+.project-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* 테이블 헤더 스타일 */
+.project-table thead th {
   text-align: left;
   font-weight: 600;
-  padding: 32px 50px;
+  padding: 32px 0;
   font-size: 14px;
-  line-height: 150%;
+  line-height: 160%;
   border-bottom: 1px solid #000;
 }
 
-/* 데이터 셀 각각 분리 */
+/* 개별 헤더 간 여백 */
+.th-no {
+  padding-left: 0px;
+  width: 98px;
+}
+.th-name {
+  width: 741px;
+}
+.th-project {
+  width: 1482px;
+}
+.th-year {
+  text-align: right !important;
+  width: 139px;
+  padding-right: 50px;
+  width: 29px;
+}
+
+/* 본문 셀 */
+.project-table tbody td {
+  vertical-align: top;
+  padding: 40px 0;
+  border-bottom: 1px solid #d8d8d8; /* 연한 회색 보더 */
+}
+
 .td-no {
-  font-size: 14px;
-  padding: 12px 50px;
-  vertical-align: top;
-}
-
-.td-name {
-  padding: 12px 50px;
-  vertical-align: top;
-}
-
-.td-project {
-  padding: 12px 50px;
-  vertical-align: top;
+  font-size: 16px;
+  width: 98px;
+  font-weight: 600;
+  line-height: 150%;
 }
 
 .td-year {
-  padding: 12px 50px;
-  font-size: 14px;
-  color: #555;
   text-align: right;
-  vertical-align: top;
+  width: 139px;
+  color: #000;
+  font-size: 16px;
 }
 
-/* 안의 텍스트 요소들 */
+/* 프로젝트 상세 */
 .project-name {
-  font-weight: 700;
-  font-size: 16px;
+  font-weight: 600;
+  width: 741px;
+  font-size: 40px;
+  line-height: 130%;
 }
 
 .project-desc-title {
   font-weight: 600;
-  margin-bottom: 6px;
-  font-size: 14px;
+  margin-bottom: 16px;
+  line-height: 150%;
+  font-size: 16px;
 }
 
 .project-desc-item {
-  font-size: 13px;
-  color: #444;
-  margin-bottom: 2px;
+  font-size: 16px;
+  color: #494949;
+  margin-bottom: 8px;
 }
 
-/* WORKS 페이지용 썸네일 및 역할 */
+/* Tool Set 설정 */
+
+.tool-set {
+  padding: 0 50px 160px;
+}
+
+.tool-item {
+  display: flex;
+  margin-bottom: 16px;
+  gap: 24px;
+}
+
+.tool-category {
+  width: 160px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #000;
+}
+
+.tool-list {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 130%;
+  color: #000;
+}
+
+/* ----------------- WORKS 페이지용 썸네일 및 역할----------------- */
 .thumb {
   width: 100px;
   height: 70px;
@@ -215,6 +257,69 @@ main {
 .footer-section h4 {
   margin-bottom: 10px;
 }
+/* Work 프로젝트 테이블 */
+.work-projects {
+  padding: 0 50px 200px;
+}
+
+.work-table {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-collapse: collapse;
+}
+
+.work-row {
+  display: grid;
+  grid-template-columns: 60px 200px 160px 1fr 1fr 140px;
+  gap: 24px;
+  padding: 32px 0;
+  border-bottom: 1px solid #000;
+}
+
+.work-head {
+  font-weight: 600;
+  font-size: 14px;
+  border-bottom: 1px solid #000;
+  padding-bottom: 16px;
+}
+
+.work-cell {
+  font-size: 14px;
+  line-height: 160%;
+  color: #000;
+}
+
+.work-img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 4px;
+  display: block;
+}
+
+.work-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.desc-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.desc-item {
+  font-size: 13px;
+  color: #444;
+  margin-bottom: 2px;
+}
+
+.work-cell.year {
+  font-size: 14px;
+  text-align: right;
+  padding-right: 8px;
+}
 
 /* -------------------- Posts 페이지용 -------------------- */
 
@@ -224,14 +329,6 @@ main {
   margin: 200px 50px 120px 50px;
 }
 
-.experience {
-  font-size: 16px;
-  color: #000;
-  font-weight: 600;
-  margin: 8px 50px 32px 50px;
-  line-height: 160%;
-}
-
 .posts-section {
   padding: 0 50px 100px;
 }
@@ -239,7 +336,7 @@ main {
   display: grid;
   grid-template-columns: repeat(1, 1fr); /* 기본 1개 */
   gap: 64px 20px;
-  padding: 0 50px 200px;
+  padding: 0 50px 160px;
   max-width: 2560px;
   margin: 0 auto;
 }
