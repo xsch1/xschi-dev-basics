@@ -22,7 +22,7 @@ a {
 
 main {
   flex: 1;
-  padding-top: 48px; /* 화면 상단과 콘텐츠 사이 여백 */
+  padding-top: 0px; /* 화면 상단과 콘텐츠 사이 여백 */
 }
 
 /* 네비게이션 */
@@ -30,7 +30,7 @@ main {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px;
+  padding: 48px 50px 24px 50px;
 }
 
 .logo {
@@ -216,16 +216,114 @@ main {
   margin-bottom: 10px;
 }
 
-/* Footer */
-.footer {
-  padding: 40px 50px;
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  font-size: 12px;
-  color: #666;
+/* -------------------- Posts 페이지용 -------------------- */
+
+.page-title {
+  font-size: 130px;
+  font-weight: 600;
+  margin: 200px 50px 120px 50px;
 }
 
-.footer-contact {
-  text-align: right;
+.experience {
+  font-size: 16px;
+  color: #000;
+  font-weight: 600;
+  margin: 8px 50px 32px 50px;
+  line-height: 160%;
+}
+
+.posts-section {
+  padding: 0 50px 100px;
+}
+.posts-grid {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* 기본 1개 */
+  gap: 64px 20px;
+  padding: 0 50px 200px;
+  max-width: 2560px;
+  margin: 0 auto;
+}
+
+.post-card {
+  width: 100%;
+  max-width: 600px;
+}
+
+.post-thumbnail {
+  width: 100%;
+  aspect-ratio: 600 / 385;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px;
+}
+
+/* 2개 */
+@media (min-width: 768px) {
+  .posts-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* 3개 */
+@media (min-width: 1024px) {
+  .posts-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* 4개 */
+@media (min-width: 1440px) {
+  .posts-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+.post-card {
+  width: 100%;
+}
+
+.post-thumbnail {
+  width: 100%;
+  aspect-ratio: 600 / 385;
+  object-fit: cover;
+  display: block;
+  border-radius: 4px; /* 필요 시 */
+}
+
+/* 텍스트 영역 */
+.post-meta {
+  margin-top: 16px;
+}
+
+.post-title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  margin-bottom: 4px;
+}
+
+.post-desc {
+  font-size: 16px;
+  color: #494949;
+  font-weight: 400;
+  white-space: nowrap; /* 한 줄로 제한 */
+  overflow: hidden; /* 넘치면 숨김 */
+  text-overflow: ellipsis; /* 말줄임표 (...) */
+}
+
+/* Footer */
+.footer-info {
+  padding: 48px 50px;
+  display: flex;
+  flex-direction: column; /* 세로 정렬 */
+  align-items: flex-start; /* 왼쪽 정렬하려면 */
+  gap: 32px; /* 줄 간격 */
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 160%;
+  color: #000;
+}
+
+.footer-name {
+  font-weight: 600;
+  line-height: 160%;
 }
