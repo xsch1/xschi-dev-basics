@@ -1,0 +1,263 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'pretendard', sans-serif;
+  background-color: #fff;
+  color: #111;
+}
+
+.container {
+  display: flex;
+  padding: 50px;
+  gap: 50px;
+  align-items: flex-start; /* ⭐ 중요: 사이드바 높이를 자연스럽게 */
+}
+
+.main {
+  flex: 3;
+}
+
+.main-image {
+  width: 100%;
+  height: 240px;
+  background-color: #d9d9d9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  margin-bottom: 32px;
+  border-radius: 16px;
+}
+
+.tabs {
+  display: flex;
+  margin-bottom: 32px;
+}
+
+.tab-list {
+  flex: 1;
+  display: flex;
+  gap: 8px; /* 버튼 사이 간격 */
+  padding: 0px 0px 32px; /* 전체 padding */
+}
+
+.tab {
+  flex: 1;
+  padding: 24px 32px;
+  border: none;
+  background-color: #f1f1f1;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 8px;
+  min-width: 120px;
+  text-align: center;
+}
+
+.tab.active {
+  background-color: #111;
+  color: white;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 64px 24px;
+  margin-bottom: 100px;
+}
+
+.menu-card {
+  background-color: #fafafa;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+.menu-img {
+  background-color: #eee;
+  height: 385px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden; /* 중요: 이미지 넘침 방지 */
+  border-radius: 16px;
+}
+
+.menu-img img {
+  height: 100%; /* 세로 기준으로 맞추기 */
+  width: auto; /* 가로는 비율 유지 */
+  object-fit: cover; /* 필요시 자르기 */
+}
+
+.menu-content {
+  padding: 32px 16px;
+}
+
+.menu-name {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 6px;
+  line-height: 150%;
+  color: #000;
+}
+
+.menu-price {
+  color: #123aff;
+  font-weight: 600;
+  margin-bottom: 6px;
+  line-height: 150%;
+  font-size: 20px;
+}
+
+.menu-desc {
+  font-size: 18px;
+  color: #494949;
+  line-height: 150%;
+  font-weight: 400;
+  display: -webkit-box;
+  -webkit-line-clamp: 2; /* 최대 두 줄 */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin: 0px 50px 100px;
+}
+
+.page {
+  padding: 16px 18px;
+  border-radius: 8px;
+  font-size: 16px;
+  border: none;
+  background-color: #f1f1f1;
+  color: #7a7a7a;
+  cursor: pointer;
+}
+
+.page.active {
+  background-color: #111;
+  color: white;
+}
+
+/* -----------------------------사이드바----------------------------- */
+.sidebar {
+  flex: 1;
+  background-color: #f6f6f6;
+  padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  border-radius: 16px;
+  /* height 관련 속성 없음! */
+}
+
+.store-title {
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.cart-item {
+  border-top: 1px solid #dedede;
+  padding: 24px 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 메뉴 정보 영역 */
+.item-info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.item-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.6;
+}
+
+.item-desc {
+  font-size: 18px;
+  color: #7a7a7a;
+  line-height: 1.6;
+}
+
+.item-price {
+  font-size: 24px;
+  margin-top: 16px;
+  color: #111;
+  font-weight: 500;
+}
+
+/* 수량 조절 영역 */
+.item-qty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.qty-btn {
+  width: 36px;
+  height: 36px;
+  font-size: 18px;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.qty-value {
+  font-size: 18px;
+  font-weight: 500;
+  width: 24px;
+  text-align: center;
+}
+.total-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+  border-top: 1px solid #eee;
+}
+
+.total-box .label {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333;
+}
+
+.total-box .price {
+  font-size: 32px;
+  font-weight: 500;
+  color: #123aff;
+}
+
+.checkout {
+  background-color: black;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 160%;
+  border: none;
+  border-radius: 8px;
+  padding: 24px;
+  cursor: pointer;
+  width: 100%;
+}

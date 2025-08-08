@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>유진 카페</title>
+    <link rel="stylesheet" href="/cafe.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- 좌측: 메인 영역 -->
+      <!-- HTML -->
+      <div class="main">
+
+      <!-- 카테고리 탭 -->
+      <div class="tabs">
+        <div class="tab-list">
+          <button class="tab active">커피 & 음료</button>
+          <button class="tab">아이스크림</button>
+          <button class="tab">케이크</button>
+          <button class="tab">병음료</button>
+        </div>
+      </div>
+
+      <!-- 메뉴 카드 영역 -->
+      <div class="menu-grid">
+
+        <div
+          class="menu-card"
+          data-id="A"
+          data-name="바닐라 크림 라떼"
+          data-desc="부드러운 우유 위에 바닐라 크림을 얹어 한 모금마다 달콤함이 퍼지는 시그니처 라떼"
+          data-price="5600원">
+          <img src="image/coffeeA.png" alt="바닐라 크림 라떼" />
+          <div class="menu-content">
+            <p class="menu-name">바닐라 크림 라떼</p>
+            <p class="menu-price">5,600원</p>
+            <p class="menu-desc">
+              부드러운 우유 위에 바닐라 크림을 얹어 한 모금마다 달콤함이 퍼지는 시그니처 라떼
+            </p>
+          </div>
+        </div>
+        <div
+          class="menu-card"
+          data-id="B"
+          data-name="자몽 허니 블랙티"
+          data-desc="달지 않은 블랙티에 상큼한 자몽과 꿀을 더해 기분까지 맑아지는 과일 티"
+          data-price="4900원">
+          <img src="image/coffeeB.png" alt="자몽 허니 블랙티" />
+          <div class="menu-content">
+            <p class="menu-name">자몽 허니 블랙티</p>
+            <p class="menu-price">4,900원</p>
+            <p class="menu-desc">
+              달지 않은 블랙티에 상큼한 자몽과 꿀을 더해 기분까지 맑아지는 과일
+              티
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="menu-card"
+          data-id="C"
+          data-name="로즈 캐모마일 밀크티"
+          data-desc="은은한 캐모마일과 장미 향이 어우러진 따뜻한 밀크티, 휴식이 필요한 날에 추천"
+          data-price="5200원">
+          <img src="image/coffeeC.png" alt="로즈 캐모마일 밀크티" />
+          <div class="menu-content">
+            <p class="menu-name">로즈 캐모마일 밀크티</p>
+            <p class="menu-price">5,200원</p>
+            <p class="menu-desc">
+              은은한 캐모마일과 장미 향이 어우러진 따뜻한 밀크티, 휴식이 필요한
+              날에 추천
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="menu-card"
+          data-id="D"
+          data-name="말차 크림 쉐이크"
+          data-desc="쌉싸름한 프리미엄 말차와 부드러운 크림이 어우러진 진한 녹색 쉐이크"
+          data-price="7200원">
+          <img src="image/coffeeD.png" alt="말차 크림 쉐이크" />
+          <div class="menu-content">
+            <p class="menu-name">말차 크림 쉐이크</p>
+            <p class="menu-price">7,200원</p>
+            <p class="menu-desc">
+              쌉싸름한 프리미엄 말차와 부드러운 크림이 어우러진 진한 녹색 쉐이크
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="menu-card"
+          data-id="E"
+          data-name="아인슈페너"
+          data-desc="진한 에스프레소 위에 휘핑 크림을 가득 올린 달콤 쌉싸름한 유럽식 커피"
+          data-price="5200원">
+          <img src="image/coffeeE.png" alt="아인슈페너" />
+          <div class="menu-content">
+            <p class="menu-name">아인슈페너</p>
+            <p class="menu-price">5,200원</p>
+            <p class="menu-desc">
+              진한 에스프레소 위에 휘핑 크림을 가득 올린 달콤 쌉싸름한 유럽식
+              커피
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="menu-card"
+          data-id="F"
+          data-name="딸기 요거트 스무디"
+          data-desc="딸기와 요거트를 갈아낸 상큼하고 시원한 스무디"
+          data-price="8400원">
+          <img src="image/coffeeF.png" alt="딸기 요거트 스무디" />
+          <div class="menu-content">
+            <p class="menu-name">딸기 요거트 스무디</p>
+            <p class="menu-price">8,400원</p>
+            <p class="menu-desc">
+              딸기와 요거트를 갈아낸 상큼하고 시원한 스무디
+            </p>
+          </div>
+        </div>
+
+        <!-- 필요하면 더 추가 -->
+      </div>
+
+      <!-- 페이지네이션 -->
+      <div class="pagination">
+        <button class="page active">1</button>
+        <button class="page">2</button>
+        <button class="page">3</button>
+        <button class="page">4</button>
+        <button class="page">5</button>
+      </div>
+    </div>
+
+    <!-- 우측: 장바구니 -->
+    <!-- 우측: 장바구니 -->
+    <div class="sidebar">
+      <h2 class="store-title">유진 카페</h2>
+
+      <!-- 여기에만 장바구니 항목이 동적으로 생성됨 -->
+      <div id="cart-items" class="cart-items"></div>
+
+      <div class="total-box">
+        <span class="label">합계</span>
+        <span class="price" id="total-price">0원</span>
+      </div>
+
+      <button class="checkout">결제하기</button>
+    </div>
+
+    <script src="/cafe.js"></script>
+  </body>
+</html>
